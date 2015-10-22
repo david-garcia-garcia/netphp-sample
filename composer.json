@@ -1,0 +1,12 @@
+{
+    "require": {
+        "drupalonwindows/netphp": "2.x-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "MyProject\\": "src/",
+            "ms\\": "ms/",
+            "ms2\\": "ms2/"
+        }
+    }
+}

@@ -120,6 +120,9 @@ class RuntimeManager {
     // Generate the static class model.
     try {
       $dumper->GenerateModel();
+      // Just make sure that PHP can start using this new classes
+      // during this same request.
+      clearstatcache();
     }
     catch (\Exception $e){}
 

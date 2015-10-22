@@ -9,13 +9,13 @@
     <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
     <AssemblyName>netphp-sample</AssemblyName>
     <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
-    <Server>Custom</Server>
+    <Server>PHPDev</Server>
     <PublishEvent>None</PublishEvent>
     <PHPDevAutoPort>True</PHPDevAutoPort>
     <PHPDevPort>55472</PHPDevPort>
     <PHPDevHostName>localhost</PHPDevHostName>
     <IISProjectUrl>http://localhost:55472/</IISProjectUrl>
-    <CustomServerUrl>http://local.d7test.com</CustomServerUrl>
+    <CustomServerUrl>http://local.d7test.com/</CustomServerUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <IncludeDebugInformation>true</IncludeDebugInformation>

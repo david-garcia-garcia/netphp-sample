@@ -9,16 +9,11 @@ use ms2\System\netInt32;
 use ms2\System\netDateTime;
 
 /**
- * This example is a port of the official
- * 
- * http://spreadsheetlight.com/downloads/samplecode/HelloWorld.cs
- * 
- * Hello World example
+ * .Net Date Time example
  */
 class Example1 {
 
   public static function Example1() {
-
     // Make sure the Runtime is Initialized.
     RuntimeManager::Instance()->InitializeRuntime();
 

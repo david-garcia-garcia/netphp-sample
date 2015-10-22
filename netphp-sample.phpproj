@@ -16372,27 +16372,6 @@
     <Compile Include="src\samples\CompleteFramework\RuntimeManager.php" />
     <Compile Include="src\samples\SpreadsheetLight\Example1.php" />
     <Compile Include="src\samples\SpreadsheetLight\RuntimeManager.php" />
-    <Compile Include="vendor\autoload.php" />
-    <Compile Include="vendor\composer\autoload_classmap.php" />
-    <Compile Include="vendor\composer\autoload_namespaces.php" />
-    <Compile Include="vendor\composer\autoload_psr4.php" />
-    <Compile Include="vendor\composer\autoload_real.php" />
-    <Compile Include="vendor\composer\ClassLoader.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\index.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\Core\ComProxy.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\Core\MagicWrapper.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\Core\NetManager.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\Core\NetPhpRuntime.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\Core\NetProxy.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\Core\NetProxyCollection.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\Core\TypeDumper.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\Core\TypeMapBase.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\Core\TypeMapping.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\Core\Utilities.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\RootDetector.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\Samples\AjaxMinSample.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\Samples\XFiniumSamples.php" />
-    <Compile Include="vendor\drupalonwindows\netphp\src\Tests\FrameworkTest.php" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="binaries\" />
@@ -16696,36 +16675,11 @@
     <Folder Include="src\samples\" />
     <Folder Include="src\samples\CompleteFramework\" />
     <Folder Include="src\samples\SpreadsheetLight\" />
-    <Folder Include="vendor\" />
-    <Folder Include="vendor\composer\" />
-    <Folder Include="vendor\drupalonwindows\" />
-    <Folder Include="vendor\drupalonwindows\netphp\" />
-    <Folder Include="vendor\drupalonwindows\netphp\.vs\" />
-    <Folder Include="vendor\drupalonwindows\netphp\.vs\config\" />
-    <Folder Include="vendor\drupalonwindows\netphp\.vs\NetPhp\" />
-    <Folder Include="vendor\drupalonwindows\netphp\.vs\NetPhp\v14\" />
-    <Folder Include="vendor\drupalonwindows\netphp\src\" />
-    <Folder Include="vendor\drupalonwindows\netphp\src\Core\" />
-    <Folder Include="vendor\drupalonwindows\netphp\src\Samples\" />
-    <Folder Include="vendor\drupalonwindows\netphp\src\Tests\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="binaries\DocumentFormat.OpenXml.dll" />
     <Content Include="binaries\SpreadsheetLight.dll" />
     <Content Include="composer.json" />
-    <Content Include="vendor\composer\installed.json" />
-    <Content Include="vendor\composer\LICENSE" />
-    <Content Include="vendor\drupalonwindows\netphp\.gitignore" />
-    <Content Include="vendor\drupalonwindows\netphp\.vs\config\applicationhost.config" />
-    <Content Include="vendor\drupalonwindows\netphp\composer.json" />
-    <Content Include="vendor\drupalonwindows\netphp\LICENSE" />
-    <Content Include="vendor\drupalonwindows\netphp\NetPhp.phpproj" />
-    <Content Include="vendor\drupalonwindows\netphp\NetPhp.phpproj.user" />
-    <Content Include="vendor\drupalonwindows\netphp\README.md" />
-    <Content Include="vendor\drupalonwindows\netphp\register_x64.bat" />
-    <Content Include="vendor\drupalonwindows\netphp\register_x86.bat" />
-    <Content Include="vendor\drupalonwindows\netphp\unregister_x64.bat" />
-    <Content Include="vendor\drupalonwindows\netphp\unregister_x86.bat" />
-    <Content Include="vendor\drupalonwindows\netphp\web.config" />
+    <Content Include="Readme.md" />
   </ItemGroup>
 </Project>

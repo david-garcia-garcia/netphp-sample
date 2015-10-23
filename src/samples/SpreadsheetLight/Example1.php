@@ -18,6 +18,7 @@ use ms\System\netDateTime;
  * Hello World example
  */
 class Example1 {
+
   public static function Example1() {
 
     // Make sure the Runtime is Initialized.
@@ -80,5 +81,32 @@ class Example1 {
     $sl->SaveAs("d:\\HelloWorld.xlsx");
 
     echo '<br>Check out your first Excel file at d:\HelloWorld.xlsx</br>';
+  }
+
+  public static function Example2() {
+
+    // Make sure the Runtime is Initialized.
+    RuntimeManager::Instance()->InitializeRuntime();
+
+    $css = <<<CSS
+
+body {
+    color: purple;
+    background-color: #d8da3d 
+}
+
+CSS;
+
+    $minifier = \ms\Microsoft\Ajax\Utilities\netMinifier::Minifier_Constructor();
+    $settings = \ms\Microsoft\Ajax\Utilities\netCodeSettings::CodeSettings_Constructor();
+    $csssettings = \ms\Microsoft\Ajax\Utilities\netCssSettings::CssSettings_Constructor();
+    $settings->OutputMode(\ms\Microsoft\Ajax\Utilities\netOutputMode::SingleLine());
+    $settings->PreserveFunctionNames(FALSE);
+    $settings->QuoteObjectLiteralProperties(TRUE);
+
+    $result = $minifier->MinifyStyleSheet($css, $csssettings, $settings)->Val();
+
+    echo $result;
+
   }
 }

@@ -27,4 +27,7 @@ class Example1 {
     // Open a directory with process explorer
     \ms2\System\Diagnostics\netProcess::_Start("explorer.exe", "c:\\");
   }
+
+ 
+
 }

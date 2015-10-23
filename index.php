@@ -26,6 +26,7 @@ flush_buffers();
 
 // Now call the samples.
 \MyProject\Samples\Spreadsheetlight\Example1::Example1();
+\MyProject\Samples\Spreadsheetlight\Example1::Example2();
 \MyProject\Samples\CompleteFramework\Example1::Example1();
 
 print "</body></html>";

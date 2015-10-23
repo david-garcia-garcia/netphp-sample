@@ -42,6 +42,7 @@ class RuntimeManager {
       // Add both SpreadsheetLight and the OpenXML it depends on.
       $this->runtime->RegisterAssemblyFromFile(APPLICATION_ROOT . '/binaries/SpreadsheetLight.dll', 'SpreadsheetLight');
       $this->runtime->RegisterAssemblyFromFile(APPLICATION_ROOT . '/binaries/DocumentFormat.OpenXml.dll', 'DocumentFormat.OpenXml');
+      $this->runtime->RegisterAssemblyFromFile(APPLICATION_ROOT . '/binaries/AjaxMin.dll', 'AjaxMin');
 
       // Once we have a Static Typed PHP model
       // we need to explictly tell it to use
@@ -108,8 +109,9 @@ class RuntimeManager {
     $dumper->AddDumpFilter('^SpreadsheetLight\..*');
 
     // Add a few hand picked classes.
-    $dumper->AddDumpFilter('System\.Convert$');
-    $dumper->AddDumpFilter('System\.DateTime$');
+    $dumper->AddDumpFilter('^System\.Convert$');
+    $dumper->AddDumpFilter('^System\.DateTime$');
+    $dumper->AddDumpFilter('^Microsoft\.Ajax\.Utilities.*');
 
     // Limit the depth of Type recursive discovery. From the classes
     // that you have just filtered, the dumper will start recursively

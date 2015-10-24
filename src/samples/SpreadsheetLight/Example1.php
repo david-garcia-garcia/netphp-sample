@@ -105,8 +105,60 @@ CSS;
     $settings->QuoteObjectLiteralProperties(TRUE);
 
     $result = $minifier->MinifyStyleSheet($css, $csssettings, $settings)->Val();
-
+  
     echo $result;
+
+  }
+
+  public static function ProceduralExample() {
+  
+    // Instantiate and initialize the Model
+    $runtime = new \NetPhp\Core\NetPhpRuntime('COM', 'netutilities.NetPhpRuntime');
+    $runtime->Initialize();
+
+    // Register the assemblies that we will be using. The runtime has bundles with some
+    // of the most used assemblies of the .Net framework.
+    $runtime->RegisterNetFramework2();
+
+    // Add both SpreadsheetLight and the OpenXML it depends on.
+    $runtime->RegisterAssemblyFromFile(APPLICATION_ROOT . '/binaries/SpreadsheetLight.dll', 'SpreadsheetLight');
+    $runtime->RegisterAssemblyFromFile(APPLICATION_ROOT . '/binaries/DocumentFormat.OpenXml.dll', 'DocumentFormat.OpenXml');
+    $runtime->RegisterAssemblyFromFile(APPLICATION_ROOT . '/binaries/AjaxMin.dll', 'AjaxMin');
+
+    // Using the FullName of a type that belongs to an assembly that has already been registered.
+    $datetime = $runtime->TypeFromName("System.DateTime");
+
+    // Using the FullName of a type that has not been registered yet (from a file)
+    $minifier = $runtime->TypeFromFile("Microsoft.Ajax.Utilities.Minifier", APPLICATION_ROOT . '/binaries/AjaxMin.dll');
+
+    // Using the FullName of a type that has not been registered yet (autodiscoverable)
+    $datetime2 = $runtime->TypeFromAssembly("System.DateTime", "mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
+  
+    $datetime->Instantiate();
+    echo $datetime->ToShortDateString()->Val(); // Outputs 01/01/0001
+
+    // We can only use Int32 from native PHP, so parse
+    // an Int64 that is equivalent to (long) in the DateTime constructor.
+    $ticks = $runtime->TypeFromName("System.Int64")->Parse('98566569856565656');
+
+    $datetime->Instantiate($ticks);
+    echo $datetime->ToShortDateString()->Val(); // Outputs 07/05/0313
+
+    $now = $runtime->TypeFromName("System.DateTime")->Now;
+    echo $now->ToShortDateString()->Val(); // Outputs "23/10/2015"
+
+    $now = $runtime->TypeFromName("System.DateTime")->Now();
+    echo $now->ToShortDateString()->Val(); // Outputs "23/10/2015"
+
+    $timer = $runtime->TypeFromName("System.Timers.Timer")->Instantiate();
+    $timer->AutoReset(TRUE);
+    $timer->AutoReset = TRUE;
+
+    $datetime->AddYears(25);
+
+    $data = $timer->GetPhpFromJson();
+
+    var_dump($data);
 
   }
 }

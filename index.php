@@ -20,9 +20,12 @@ flush_buffers();
 // On the first RUN the static models will be created, this might take A WHILE!
 \MyProject\Samples\CompleteFramework\RuntimeManager::Instance()->GenerateStaticClassModel();
 \MyProject\Samples\Spreadsheetlight\RuntimeManager::Instance()->GenerateStaticClassModel();
+\MyProject\Samples\WordInterop\RuntimeManager::Instance()->GenerateStaticClassModel();
 
 print "Running examples...";
 flush_buffers();
+
+//\MyProject\Samples\WordInterop\Example1::Example1();
 
 // Now call the samples.
 \MyProject\Samples\Spreadsheetlight\Example1::Example1();

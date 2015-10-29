@@ -141,6 +141,8 @@ CSS;
     // an Int64 that is equivalent to (long) in the DateTime constructor.
     $ticks = $runtime->TypeFromName("System.Int64")->Parse('98566569856565656');
 
+    $ticks = \ms\System\netInt64::_Parse('98566569856565656');
+
     $datetime->Instantiate($ticks);
     echo $datetime->ToShortDateString()->Val(); // Outputs 07/05/0313
 
@@ -159,6 +161,21 @@ CSS;
     $data = $timer->GetPhpFromJson();
 
     var_dump($data);
+
+    // Compare Enum
+    $IsMonday = $runtime->TypeFromName("System.DateTime")->Now->DayOfWeek->Equals($runtime->TypeFromName("System.DayOfWeek")->Enum('Monday'));
+
+    // Working with collections.
+    $list = $runtime->TypeFromName("System.Collections.ArrayList")->Instantiate()->AsIterator();
+
+    $list->Add('My first thing');
+    $list->Add(2562);
+
+    echo count($list); // Outputs 2
+
+    foreach ($list as $item) {
+      echo "item: {$item->Val()} </br>";
+    }
 
   }
 }

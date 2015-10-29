@@ -6,7 +6,8 @@
         "psr-4": {
             "MyProject\\": "src/",
             "ms\\": "ms/",
-            "ms2\\": "ms2/"
+            "ms2\\": "ms2/",
+            "wd\\": "wd/"
         }
     }
 }
